@@ -1,13 +1,17 @@
 import React from 'react';
 
-const Basket = () => {
+const Basket = (props) => {
   return (
     <section>
       <p>Shopping Cart</p>
       <ul>
-        <li>Phone 1 <button>x</button></li>
-        <li>Phone 2 <button>x</button></li>
-        <li>Phone 3 <button>x</button></li>
+          {   console.log(props.items)}
+          {    props.items.map((item, index) => {return(
+                  <li>{item}<button onClick={() => {
+                      props.onDeleteFromBasket(index)
+                  }}>x</button></li>
+              )})
+          }
       </ul>
     </section>
   );
