@@ -55,7 +55,7 @@ class App extends React.Component {
 
 
                       this.setState({
-                         basketItems: [...this.basketItems, newItems],
+                         basketItems: [...this.state.basketItems, newItems],
                       }
                       )
                   }}
