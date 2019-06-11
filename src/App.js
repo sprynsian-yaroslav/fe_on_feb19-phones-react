@@ -68,11 +68,8 @@ class App extends React.Component {
                   phones={this.state.phones}
 
                   addToBasket = {(newItems) => {
-                      const newState = this.state.basketItems;
-                      newState.push(newItems);
-
                       this.setState({
-                              basketItems: newState,
+                              basketItems: [...this.state.basketItems, newItems],
                           }
                       )
 
